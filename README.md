@@ -45,7 +45,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Framework：React + Function Component + Hook
 - Language：Typescript
 
-- Style：Module CSS + Bootstrap
+- Style：CSS Module + Bootstrap
 
 - State：React Context
 
