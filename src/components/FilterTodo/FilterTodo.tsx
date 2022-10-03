@@ -16,13 +16,17 @@ const FilterTodo: React.FC = () => {
     setFilterValue(event.target.value);
   };
 
-  const onSearchTaskHandler = () => {
-    todosCtx.changeQueryString(filterValue);
-  };
+  const onSearchTaskHandler = () => {};
 
   const onSortByCreateTimeHandler = () => {
     todosCtx.sortByColumn(TODO_PROPS.createTime, isTimeDesc);
     setIsTimeDesc((pre) => !pre);
+  };
+
+  const PressEnterHandler = (event: any) => {
+    if (event.key === "Enter") {
+      todosCtx.changeQueryString(filterValue);
+    }
   };
 
   return (
@@ -30,7 +34,11 @@ const FilterTodo: React.FC = () => {
       <div className={classes.container}>
         <div>
           <label className={classes.taskLabel}>Task：</label>
-          <TextInput value={filterValue} onChange={onChangeHandler} />
+          <TextInput
+            value={filterValue}
+            onChange={onChangeHandler}
+            onKeyDown={PressEnterHandler}
+          />
           <Button onClick={onSearchTaskHandler}>Search </Button>
         </div>
         <Button onClick={onSortByCreateTimeHandler}>{`Sort By Time ${

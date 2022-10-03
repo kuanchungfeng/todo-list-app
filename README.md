@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Getting Started with Todo List App
+
+![Todo List App preview](./src/docs/images/preview.jpg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 前置環境
 
-In the project directory, you can run:
+- git(optional)
+- node.js
+- yarn (optional)
 
-### `yarn start`
+## 啟動流程
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. git clone https://github.com/kuanchungfeng/todo-list-app.git(or download zip and extract it)
+2. ### `npm install` or `yarn install`
+3. ### `npm start` or `yarn start`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 欄位說明
 
-### `yarn test`
+| 欄位名稱    | 類型    | 備註                 |
+| ----------- | ------- | -------------------- |
+| id          | string  |                      |
+| title       | string  | 每個 task 的主要內容 |
+| description | string  | 補充說明 task        |
+| completed   | boolean | 是否完成             |
+| createTime  | Date    | 建立時間             |
+| editable    | boolean | 是否可編輯           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 功能介紹
 
-### `yarn build`
+- btn:[Add Task]:新增一個任務
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- btn:[Search]:依據前面 Input 進行**模糊**查詢，將查詢結果顯示在底下列表上。
+- btn:[Sort By Time desc/asc]:點擊後更改底下列表，依照時間升/降冪排序
+- btn:[Update]:更改某一筆的 Task，及其 Description
+- btn:[Delete]:刪除某一筆 Task
+- input : 每個 input，按 Enter 都會觸發輸入完成的功能(新增/查詢/修改)
+- checkbox: 更改某一筆 Task 為完成/未完成，畫線的為完成的 Task
+- checkbox 後面的 Task **Double Click** 可以切換成編輯模式
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Codebase Architecture
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Framework：React + Function Component + Hook
+- Language：Typescript
 
-### `yarn eject`
+- Style：Module CSS + Bootstrap
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- State：React Context
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- - 測試：Jest + React Test Library -->
