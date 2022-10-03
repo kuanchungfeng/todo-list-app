@@ -1,0 +1,14 @@
+.finish {
+  text-decoration: line-through;
+}
+
+.description {
+  font: 0.75em sans-serif;
+  color: gray;
+  margin-left: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}

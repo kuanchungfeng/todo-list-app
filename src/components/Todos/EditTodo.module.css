@@ -1,0 +1,10 @@
+.descriptionInput {
+  color: gray;
+  font: 0.75em sans-serif;
+  width: 272px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
